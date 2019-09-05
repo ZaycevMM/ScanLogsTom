@@ -4,13 +4,11 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.Authenticator;
 import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.net.URL;
-import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -22,17 +20,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
-import org.simplejavamail.email.Email;
-import org.simplejavamail.email.EmailBuilder;
-import org.simplejavamail.mailer.Mailer;
-import org.simplejavamail.mailer.config.ServerConfig;
-import org.simplejavamail.mailer.config.TransportStrategy;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
-
-import ru.krista.config.MailConfig;
 import ru.krista.utility.CheckingFile;
 import ru.krista.utility.PropertiesUtil;
 
@@ -92,20 +79,20 @@ public class Application {
 		
 		String text="";
 		for (Map.Entry entry : mailInfo.entrySet()) {
-		    text =text + "Файл:" + entry.getKey() + " Ошибок: "
+		    text =text + "Р¤Р°Р№Р»::" + entry.getKey() + " РћС€РёР±РѕРє: "
 		        + entry.getValue()+ "\n";
 		}
 		//Email settings
 		//SimpleMailMessage message = new SimpleMailMessage();
  		//message.setFrom("zaycev@krista-omsk.ru");
 		//message.setTo(PropertiesUtil.getProperties().getProperty("toSend"));
-		//message.setSubject("ORA-00001: нарушено ограничение уникальности");
+		//message.setSubject("ORA-00001: РЅР°СЂСѓС€РµРЅРѕ РѕРіСЂР°РЅРёС‡РµРЅРёРµ СѓРЅРёРєР°Р»СЊРЅРѕСЃС‚Рё");
         //message.setText(text);
         //javaMailSender.send(message);
         //Email email = new EmailBuilder()
         	    //.from("LOGS", PropertiesUtil.getProperties().getProperty("toSend"))
         	    //.to("LOGS", PropertiesUtil.getProperties().getProperty("toSend"))
-        	    //.subject("ORA-00001: нарушено ограничение уникальности")
+        	    //.subject("ORA-00001: РЅР°СЂСѓС€РµРЅРѕ РѕРіСЂР°РЅРёС‡РµРЅРёРµ СѓРЅРёРєР°Р»СЊРЅРѕСЃС‚Рё")
         	    //.text(text)
         	    //.build();
 

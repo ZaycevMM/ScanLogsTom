@@ -24,7 +24,7 @@ public class MailConfig {
         mailSender.setPort(465);
         mailSender.setProtocol("smtp");
         mailSender.setUsername("zaycev@krista-omsk.ru");
-        mailSender.setPassword("123456");
+        mailSender.setPassword("*****");
         return mailSender;
     }
 }
